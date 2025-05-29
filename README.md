@@ -16,16 +16,25 @@ This versatile feature enables you to track any goal with a measurable target. F
 
 For visual details about the application, please refer to the images folder in this repository where you'll find screenshots showcasing various features of the application.
 
-## Technologies Used
+## Project Technology Stack
 
-- Front-End: React
-  - Visualization Library: D3.js
-- Back-End: Java
-  - Architecture: Microservices
-  - Build Tool: Maven
-  - Framework: Spring Boot
-  - Cloud Framework: Spring Cloud
-- Documentation: Swagger
+### Front-End
+- **Library**: React (18.2.0)
+- **Routing and State Management**: React Router DOM (6.18.0)
+- **HTTP Client**: Axios
+- **Visualization**: D3.js
+- **Database Interaction**: MongoDB (via client libraries)
+
+### Back-End
+- **Language**: Java 17
+- **Architecture**: Microservices
+- **Build Tool**: Maven
+- **Framework**: Spring Boot (3.1.4)
+- **Cloud Framework**: Spring Cloud (2022.0.3)
+- **Database**: MySQL
+- **Database Migration**: Flyway
+- **Messaging**: Spring AMQP
+- **Monitoring and Tracing**: Micrometer, Prometheus, Zipkin
 
 ## API Reference
 
@@ -47,40 +56,3 @@ Please ensure that you have Docker and Docker installed on your machine before p
 3. In the docker-compose file, on line 67, replace this line ("./runProjectConfig/mongo_food_data") with the path where you downloaded the MongoDB data.
 
 **Note:** When you first start the application, it may take a while for the Eureka server and gateway to fetch all the servers. During this time, you may see an error message in the console, and the server may return a 503 error. This is normal and should resolve itself within about a minute.
-
-## Usage
-
-### REST API
-
-Detailed instructions for using the REST API are provided in the Postman documentation. You can find examples of requests, responses, and other useful information there.
-
-### React Client
-
-To use the client application:
-
-1. Register for an account.
-2. Log in with your new account.
-
-Once you're logged in, you can start using the application. The interface is designed to be intuitive and user-friendly, so you should be able to navigate through the features easily.
-
-## Running Tests
-
-The application includes both unit and integration tests. These can be run using Maven, a build automation tool used primarily for Java projects.
-
-To run the tests, navigate to the project directory in your terminal and run the following command: mvn test
-
-## Deployment
-
-This application is not currently deployed, but there are plans for deployment in the future. Updates regarding deployment will be posted in this section.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## Contact
-
-If you want to contact me you can reach me at dimitrovmail99@gmail.com.
-
-## Future Plans
-
-The current plan for the future development of this application involves transitioning the microservices architecture to Kubernetes. This will enhance the scalability and reliability of the application.
